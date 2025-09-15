@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der Greifautomat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Der Greifautomat</h1>
+        <div id="game-screen">
+            <div id="claw"></div>
+            <div class="prize" data-x="300" data-y="50"></div>
+            <div class="prize" data-x="100" data-y="120"></div>
+            <div class="prize" data-x="500" data-y="150"></div>
+        </div>
+        <div class="controls">
+            <p>Münzen: <span id="coins">500</span></p>
+            <p>Versuche: <span id="tries">0</span> von 2</p>
+        </div>
+        <div id="message">Drücke eine Taste, um zu starten.</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

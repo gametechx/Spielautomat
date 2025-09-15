@@ -1,0 +1,104 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    border: 5px solid #333;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+h1 {
+    color: #333;
+}
+
+#game-screen {
+    width: 100%;
+    height: 400px;
+    background-color: #ddd;
+    border: 2px solid #aaa;
+    position: relative;
+    overflow: hidden;
+}
+
+#claw {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 350px;
+    transition: top 0.5s ease-in-out, left 0.2s linear;
+}
+
+#claw::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 40px;
+    background-color: #000;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.prize {
+    width: 40px;
+    height: 40px;
+    background-color: gold;
+    border-radius: 50%;
+    position: absolute;
+    border: 2px solid #555;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.controls {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #444;
+    min-height: 2em;
+}
+
+/* Visuelle Effekte für Greifen */
+.claw-down {
+    transition: top 0.5s ease-in-out;
+}
+
+.grabbed {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    animation: fade-out 1s forwards;
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.pulsate {
+    animation: pulsate-anim 1s infinite alternate;
+}
+
+@keyframes pulsate-anim {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
